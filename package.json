@@ -2,7 +2,10 @@
   "name": "react-in-angular",
   "version": "1.0.0",
   "description": "The easiest way to embed React components in Angular 1 apps.",
-  "main": "index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nucleartux/react-in-angular.git"
+  },
   "author": "Adrov Igor",
   "license": "MIT",
   "@pika/pack": {
