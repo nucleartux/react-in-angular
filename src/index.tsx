@@ -3,8 +3,6 @@ import ReactDOM from "react-dom";
 import { fromPairs, pick, reduce } from "lodash-es";
 import * as angular from "angular";
 
-export interface ICtrl {}
-
 /**
  * Wraps a React component into Angular component. Returns a new Angular component.
  *
@@ -13,10 +11,10 @@ export interface ICtrl {}
  */
 export default function angularInReact<Props>(
   ComponentClass: React.ComponentType<Props>,
-  names: (keyof Props)[] | null = null,
+  names: (keyof Props)[] = [],
   serviceProps: string[] = []
 ) {
-  class Ctrl implements ICtrl {
+  class Ctrl {
     static $inject = ["$element", "$scope", "$injector"];
 
     constructor(
@@ -73,7 +71,7 @@ export default function angularInReact<Props>(
   }
 
   return {
-    bindings: fromPairs(names.map(name => [name, "<"])),
-    controller: Ctrl as ICtrl
+    bindings: fromPairs(names.map(name => [name, "<"])) as {[boundProperty: string]: string},
+    controller: Ctrl as angular.Injectable<angular.IControllerConstructor>
   };
 }
