@@ -2,10 +2,10 @@
 
 ```sh
 # Using Yarn:
-yarn add react-in-angular react react-dom
+yarn add react-in-angular1 react react-dom
 
 # Or, using NPM:
-npm install react-in-angular react react-dom --save
+npm install react-in-angular1 react react-dom --save
 ```
 
 ## Usage
@@ -28,7 +28,7 @@ class MyComponent extends Component {
 ### 2. Expose it to Angular
 
 ```js
-import reactInAngular from 'react-in-angular'
+import reactInAngular from 'react-in-angular1'
 
 angular
   .module('myModule', [])
@@ -50,7 +50,7 @@ It's easy to pass services/constants/etc. to your React component: just pass the
 
 ```js
 import { Component } from 'react'
-import reactInAngular from 'react-in-angular'
+import reactInAngular from 'react-in-angular1'
 
 class MyComponent extends Component {
   state = {
