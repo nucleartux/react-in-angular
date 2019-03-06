@@ -11,12 +11,7 @@
   "@pika/pack": {
     "pipeline": [
       [
-        "@pika/plugin-ts-standard-pkg",
-        {
-          "exclude": [
-            "__tests__/*"
-          ]
-        }
+        "@pika/plugin-ts-standard-pkg"
       ],
       [
         "@pika/plugin-build-node"
@@ -30,10 +25,10 @@
     ]
   },
   "devDependencies": {
-    "@pika/plugin-build-node": "^0.3.10",
-    "@pika/plugin-build-types": "^0.3.10",
-    "@pika/plugin-build-web": "^0.3.10",
-    "@pika/plugin-ts-standard-pkg": "^0.3.10",
+    "@pika/plugin-build-node": "^0.3.14",
+    "@pika/plugin-build-types": "^0.3.14",
+    "@pika/plugin-build-web": "^0.3.14",
+    "@pika/plugin-ts-standard-pkg": "^0.3.14",
     "typescript": "^3.3.3"
   },
   "publishConfig": {

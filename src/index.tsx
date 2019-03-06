@@ -14,64 +14,65 @@ export default function angularInReact<Props>(
   names: (keyof Props)[] = [],
   serviceProps: string[] = []
 ) {
-  class Ctrl {
-    static $inject = ["$element", "$scope", "$injector"];
+  function Ctrl($element: any, $scope: angular.IScope, $injector: any) {
+    var ctrl = this;
 
-    constructor(
-      private $element: any,
-      private $scope: angular.IScope,
-      private $injector: any
-    ) {}
-
-    wrapFn = (prop: any) => {
+    function wrapFn(prop: any) {
       if (typeof prop === "function") {
-        return (...args: any[]) => {
-          const result = prop(...args);
-          this.$scope.$applyAsync();
+        return function() {
+          var result = prop.apply(void 0, arguments);
+          $scope.$applyAsync();
           return result;
         };
       }
 
       return prop;
-    };
+    }
 
-    $onChanges() {
-      const props = pick(this, names);
+    ctrl.$onChanges = function() {
+      var props = pick(this, names);
 
       // Wrap passed angular functions into $apply, because those functions
       // are supposed to be invoked within React
       // and we need to notify angular
-      const wrappedProps = reduce(
+      var wrappedProps = reduce(
         props as any,
-        (result, value, key) => {
+        function(result, value, key) {
           return {
             ...result,
-            [key]: this.wrapFn(value)
+            [key]: wrapFn(value)
           };
         },
         {}
       );
 
-      const services = serviceProps.reduce((result, key) => {
+      var services = serviceProps.reduce(function(result, key) {
         return {
           ...result,
-          [key]: this.$injector.get(key)
+          [key]: $injector.get(key)
         };
       }, {});
 
       ReactDOM.render(
         <ComponentClass {...wrappedProps} {...services as any} />,
-        this.$element[0]
+        $element[0]
       );
-    }
+    };
 
-    $onDestroy() {
-      ReactDOM.unmountComponentAtNode(this.$element[0]);
-    }
+    ctrl.$onDestroy = function() {
+      ReactDOM.unmountComponentAtNode($element[0]);
+    };
   }
+  Ctrl.$inject = ["$element", "$scope", "$injector"];
 
   return {
-    bindings: fromPairs(names.map(name => [name, "<"])) as {[boundProperty: string]: string},
+    bindings: fromPairs(
+      names.map(function(name) {
+        return [name, "<"];
+      })
+    ) as {
+      [boundProperty: string]: string;
+    },
     controller: Ctrl as angular.Injectable<angular.IControllerConstructor>
   };
 }

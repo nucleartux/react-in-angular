@@ -606,10 +606,10 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@pika/plugin-build-node@^0.3.10":
-  version "0.3.10"
-  resolved "https://registry.yarnpkg.com/@pika/plugin-build-node/-/plugin-build-node-0.3.10.tgz#a2f066e0dcfe57e4fa78e06d1d1e7b62a9181c2f"
-  integrity sha512-07Lqvm3NQAfmQsLNwxe0nI6ESdTAeOOfgEGRcgalmnsqqR7/+NgYHJOcErWwV/hn255/z+WXL2Sje+srerzxZA==
+"@pika/plugin-build-node@^0.3.14":
+  version "0.3.14"
+  resolved "https://registry.yarnpkg.com/@pika/plugin-build-node/-/plugin-build-node-0.3.14.tgz#5254bc568d023cca00abf9f05e0fcf077e8bd112"
+  integrity sha512-/HSGgOQZkun5a0ZNtY2ASjX+jW3yd/G/GjhdNu9Gm3rmaC7apiTJP6n6/rwWCxF2S1YBDCQZe1hg412IlGD63Q==
   dependencies:
     "@babel/core" "^7.0.0"
     "@babel/plugin-syntax-dynamic-import" "^7.2.0"
@@ -621,21 +621,22 @@
     rollup "^1.1.0"
     rollup-plugin-babel "^4.3.0"
 
-"@pika/plugin-build-types@^0.3.10":
-  version "0.3.10"
-  resolved "https://registry.yarnpkg.com/@pika/plugin-build-types/-/plugin-build-types-0.3.10.tgz#39226a6c15fe907da5295a20b6fceae009a3b20c"
-  integrity sha512-6rZzfrFkt2VLSh9yyGWsNXP7Xygf+1oC0hYxyHNQaPHsn+xWGs4GInmtjcwaEiJYRgRWophu1909BCq7q5Vpsw==
+"@pika/plugin-build-types@^0.3.14":
+  version "0.3.14"
+  resolved "https://registry.yarnpkg.com/@pika/plugin-build-types/-/plugin-build-types-0.3.14.tgz#1bf1f3e0ee8d824d7bd01c20faf7c2145e9f3841"
+  integrity sha512-rZheAQ5CB55SBSd+Bub06JLCelNoi9mV8P93Q1qFBVtJrQHpVjsG6fI2c2fgMUmlO/n1QI2E9Sk1WqNWIGrAMQ==
   dependencies:
     "@pika/types" "^0.3.5"
     execa "^1.0.0"
     mkdirp "^0.5.1"
     typescript "^3.0.0"
 
-"@pika/plugin-build-web@^0.3.10":
-  version "0.3.10"
-  resolved "https://registry.yarnpkg.com/@pika/plugin-build-web/-/plugin-build-web-0.3.10.tgz#1f90dee19d9b366b15c24341949240b8805fef1d"
-  integrity sha512-Lu9lLtKcMWx3aEzE2PcreS9V70FOKtyxvPj5ciNsC5N/JHx5WAFa4RaUfYjlCmzx2oI7LKt/4X6tB7Tfpu2dbw==
+"@pika/plugin-build-web@^0.3.14":
+  version "0.3.14"
+  resolved "https://registry.yarnpkg.com/@pika/plugin-build-web/-/plugin-build-web-0.3.14.tgz#bfbadef32a22937519ef8ac2e76462766b4d2d47"
+  integrity sha512-KtC1WDeVWJ3272xS3G4K5Sq0VXK66y3vt72SLGaXwAT0s4BJsj2KfzFqe4UO32v/lezZuKwdAUGxE2fyC9f8oA==
   dependencies:
+    "@babel/core" "^7.0.0"
     "@babel/plugin-syntax-dynamic-import" "^7.2.0"
     "@babel/plugin-syntax-import-meta" "^7.2.0"
     "@babel/preset-env" "^7.2.3"
@@ -644,18 +645,19 @@
     rollup "^1.1.0"
     rollup-plugin-babel "^4.3.0"
 
-"@pika/plugin-ts-standard-pkg@^0.3.10":
-  version "0.3.10"
-  resolved "https://registry.yarnpkg.com/@pika/plugin-ts-standard-pkg/-/plugin-ts-standard-pkg-0.3.10.tgz#d05a5b27b1933b92b1e0d4dd19e072d7f5746e85"
-  integrity sha512-9Hmkg1+o7Zs/67b1yWrWjq4BfHVsZXHJt98lhsMIwuusz950XmyyWl0jY4Nya/Qg9Guj91TQyMYKbrsekpQGcg==
+"@pika/plugin-ts-standard-pkg@^0.3.14":
+  version "0.3.14"
+  resolved "https://registry.yarnpkg.com/@pika/plugin-ts-standard-pkg/-/plugin-ts-standard-pkg-0.3.14.tgz#8f0edf3f9f13cd2789982d386971a76d07be3f17"
+  integrity sha512-KSDLc4cdWzSv+KGQQ8XGeI1k43yS4ODNeE0guig7WLFGpTVDVCqN3kg/neDI+vTN5NrRdkdslqLkHP5ld5lklQ==
   dependencies:
+    "@pika/types" "^0.3.5"
     execa "^1.0.0"
     standard-pkg "^0.2.0"
 
 "@pika/types@^0.3.5":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@pika/types/-/types-0.3.8.tgz#4356dcfdc115c5371bc0b96a31d12e4e506ceb53"
-  integrity sha512-hzc0IHPvz4sdlaXP4Gzu9x1WF6CUTxyXbiYDLzxJQP9kvp8w4raeL0TB9YVFyayy6bplTaakTIoNrayy0ApBbw==
+  version "0.3.11"
+  resolved "https://registry.yarnpkg.com/@pika/types/-/types-0.3.11.tgz#335cbd1024f58c21c878472930d63d5580bf7fb6"
+  integrity sha512-oOfup05OMxAM43EJ6Rhw/1FDi3Uv8rdKjAWq7Z+ylP1F8voGs+xe8IxDAJl7RyYo5BlSa7DMia2B2p4c0qQscg==
 
 "@types/angular@^1.6.54":
   version "1.6.54"
